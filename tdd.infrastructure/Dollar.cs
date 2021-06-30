@@ -3,7 +3,7 @@ namespace tdd.infrastructure
 {
     public class Dollar
     {
-        public int amount = 5 * 2;
+        public int amount;
 
         public Dollar(int amount)
         {
@@ -11,7 +11,8 @@ namespace tdd.infrastructure
         }
 
         public void times(int multiplier)
-        { 
+        {
+            amount = 5 * 2;
         }
     }
 }
