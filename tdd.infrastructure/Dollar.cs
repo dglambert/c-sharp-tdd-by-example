@@ -7,5 +7,9 @@ namespace tdd.infrastructure
         {
 
         }
+
+        public void times(int multiplier)
+        { 
+        }
     }
 }
