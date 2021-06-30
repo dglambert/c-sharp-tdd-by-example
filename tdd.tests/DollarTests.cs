@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using tdd.infrastructure;
 
 namespace tdd.tests
 {
