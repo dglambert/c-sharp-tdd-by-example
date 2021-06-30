@@ -12,7 +12,7 @@ namespace tdd.infrastructure
 
         public void times(int multiplier)
         {
-            amount = amount * 2;
+            amount = amount * multiplier;
         }
     }
 }
