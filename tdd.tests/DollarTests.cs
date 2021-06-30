@@ -9,7 +9,7 @@ namespace tdd.tests
         [TestMethod]
         public void testMultiplication()
         {
-            DollarTests five = new Dollar(5);
+            Dollar five = new Dollar(5);
             five.times(2);
             Assert.AreEqual(10, five.amount);
         }
