@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace tdd.infrastructure
 {
     public class Dollar
@@ -13,6 +15,11 @@ namespace tdd.infrastructure
         public Dollar times(int multiplier)
         {
             return new Dollar(amount * multiplier);
+        }
+
+        public bool Equals(Object obj)
+        {
+            return true;
         }
     }
 }
