@@ -19,7 +19,8 @@ namespace tdd.infrastructure
 
         public bool Equals(Object obj)
         {
-            return true;
+            Dollar dollar = (Dollar)obj;
+            return amount == dollar.amount;
         }
     }
 }
