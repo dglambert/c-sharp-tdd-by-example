@@ -12,8 +12,7 @@ namespace tdd.infrastructure
 
         public Dollar times(int multiplier)
         {
-            amount *= multiplier;
-            return null;
+            return new Dollar(amount * multiplier);
         }
     }
 }
