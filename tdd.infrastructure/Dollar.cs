@@ -17,7 +17,7 @@ namespace tdd.infrastructure
             return new Dollar(amount * multiplier);
         }
 
-        public bool Equals(Object obj)
+        public override bool Equals(Object obj)
         {
             Dollar dollar = (Dollar)obj;
             return amount == dollar.amount;
