@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using tdd.infrastructure;
 
 namespace tdd.tests
 {
@@ -9,8 +10,8 @@ namespace tdd.tests
         public void testFrancMultiplication()
         {
             Franc five = new Franc(5);
-            Assert.Equals(new Franc(10), five.times(2));
-            Assert.Equals(new Franc(15), five.times(3));
+            Assert.AreEqual(new Franc(10), five.times(2));
+            Assert.AreEqual(new Franc(15), five.times(3));
         }
     }
 }
