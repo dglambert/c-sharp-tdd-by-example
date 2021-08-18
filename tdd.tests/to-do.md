@@ -11,5 +11,5 @@
 - Equals object
 - ~~5 CHF * 2  = 10 CHF~~
 - Dollar/Franc duplication
-- Common equals()
+- **Common equals()**
 - Common times()
