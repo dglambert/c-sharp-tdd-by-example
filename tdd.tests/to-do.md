@@ -13,4 +13,4 @@
 - Dollar/Franc duplication
 - ~~Common equals()~~
 - Common times()
-- Compare Francs with Dollars
+- **Compare Francs with Dollars**
