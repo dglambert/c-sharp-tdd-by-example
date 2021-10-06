@@ -10,7 +10,7 @@ namespace tdd.infrastructure
             this.amount = amount;
         }
 
-        public Dollar times(int multiplier)
+        public override Money times(int multiplier)
         {
             return new Dollar(amount * multiplier);
         }

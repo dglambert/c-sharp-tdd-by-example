@@ -9,18 +9,18 @@ namespace tdd.tests
         [TestMethod]
         public void testMultiplication()
         {
-            Dollar five = new Dollar(5);
-            Assert.AreEqual(new Dollar(10), five.times(2));
-            Assert.AreEqual(new Dollar(15), five.times(3));
+            Money five = Money.dollar(5);
+            Assert.AreEqual(Money.dollar(10), five.times(2));
+            Assert.AreEqual(Money.dollar(15), five.times(3));
         }
 
         [TestMethod]
         public void testEquality()
         {
-            Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
-            Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
+            Assert.IsTrue(Money.dollar(5).Equals(Money.dollar(5)));
+            Assert.IsFalse(Money.dollar(5).Equals(Money.dollar(6)));
             
-            Assert.IsFalse(new Franc(5).Equals(new Dollar(5)));
+            Assert.IsFalse(new Franc(5).Equals(Money.dollar(5)));
         }
     }
 }

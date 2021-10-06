@@ -9,16 +9,16 @@ namespace tdd.tests
         [TestMethod]
         public void testFrancMultiplication()
         {
-            Franc five = new Franc(5);
-            Assert.AreEqual(new Franc(10), five.times(2));
-            Assert.AreEqual(new Franc(15), five.times(3));
+            Money five = Money.franc(5);
+            Assert.AreEqual(Money.franc(10), five.times(2));
+            Assert.AreEqual(Money.franc(15), five.times(3));
         }
 
         [TestMethod]
         public void testEquality()
         {
-            Assert.IsTrue(new Franc(5).Equals(new Franc(5)));
-            Assert.IsFalse(new Franc(5).Equals(new Franc(6)));
+            Assert.IsTrue(Money.franc(5).Equals(Money.franc(5)));
+            Assert.IsFalse(Money.franc(5).Equals(Money.franc(6)));
         }
     }
 }
