@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tdd.infrastructure
 {
-    public abstract class Money
+    public class Money
     {
         protected string _currency;
         protected int amount;
@@ -16,8 +16,11 @@ namespace tdd.infrastructure
             this.amount = amount;
             _currency = currency;
         }
-        
-        public abstract Money times(int multiplier);
+
+        public Money times(int multiplier)
+        {
+            return new Money(amount * multiplier, _currency);
+        }
         public string currency()
         {
             return _currency;
@@ -27,7 +30,12 @@ namespace tdd.infrastructure
         {
             Money money = (Money)obj;
             return amount == money.amount
-                && this.GetType() == money.GetType();
+                && currency().Equals(money.currency());
+        }
+
+        public override string ToString()
+        {
+            return amount + " " + _currency;
         }
 
 

@@ -7,10 +7,5 @@ namespace tdd.infrastructure
         public Franc(int amount, string currency) : base(amount, currency)
         {
         }
-
-        public override Money times(int multiplier)
-        {
-            return Money.franc(amount * multiplier);
-        }
     }
 }

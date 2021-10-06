@@ -8,10 +8,5 @@ namespace tdd.infrastructure
         public Dollar(int amount, string currency) : base(amount, currency)
         {
         }
-
-        public override Money times(int multiplier)
-        {
-            return Money.dollar(amount * multiplier);
-        }
     }
 }

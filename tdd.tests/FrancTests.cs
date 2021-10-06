@@ -20,5 +20,11 @@ namespace tdd.tests
             Assert.IsTrue(Money.franc(5).Equals(Money.franc(5)));
             Assert.IsFalse(Money.franc(5).Equals(Money.franc(6)));
         }
+
+        [TestMethod]
+        public void testDifferentClassEquality()
+        {
+            Assert.IsTrue(new Money(10, "CHF").Equals(new Franc(10, "CHF")));
+        }
     }
 }
