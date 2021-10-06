@@ -20,7 +20,14 @@ namespace tdd.tests
             Assert.IsTrue(Money.dollar(5).Equals(Money.dollar(5)));
             Assert.IsFalse(Money.dollar(5).Equals(Money.dollar(6)));
             
-            Assert.IsFalse(new Franc(5).Equals(Money.dollar(5)));
+            Assert.IsFalse(Money.franc(5).Equals(Money.dollar(5)));
+        }
+
+        [TestMethod]
+        public void testCurrency()
+        {
+            Assert.AreEqual("USD", Money.dollar(1).currency());
+            Assert.AreEqual("CHF", Money.franc(1).currency());
         }
     }
 }

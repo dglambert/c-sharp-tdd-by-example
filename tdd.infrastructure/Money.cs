@@ -8,7 +8,21 @@ namespace tdd.infrastructure
 {
     public abstract class Money
     {
+        protected string _currency;
         protected int amount;
+
+        public Money(int amount, string currency)
+        {
+            this.amount = amount;
+            _currency = currency;
+        }
+        
+        public abstract Money times(int multiplier);
+        public string currency()
+        {
+            return _currency;
+        }
+
         public override bool Equals(Object obj)
         {
             Money money = (Money)obj;
@@ -16,16 +30,15 @@ namespace tdd.infrastructure
                 && this.GetType() == money.GetType();
         }
 
-        public abstract Money times(int multiplier);
 
         public static Money dollar(int amount)
         {
-            return new Dollar(amount);
+            return new Dollar(amount, "USD");
         }
 
         public static Money franc(int amount)
         {
-            return new Franc(amount);
+            return new Franc(amount, "CHF");
         }
     }
 }
